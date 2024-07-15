@@ -62,7 +62,7 @@ public final class ArrayBag<T>
 
 	/** Retrieves all entries that are in this bag.
        @return  A newly allocated array of all the entries in this bag. */
-	public T[] toArray() 
+	public Object[] toArray() 
 	{
 		checkintegrity();
       

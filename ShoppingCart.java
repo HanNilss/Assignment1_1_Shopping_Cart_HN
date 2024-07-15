@@ -103,7 +103,7 @@ public class ShoppingCart {
 	 * 
 	 * @return an array of items
 	 */
-	public Item[] toArray() {
+	public Object[] toArray() {
 		return shoppingCart.toArray();
 	}//end toArray
 }//end class
