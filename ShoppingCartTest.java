@@ -7,7 +7,7 @@ public class ShoppingCartTest {
 
 	public static void main(String[] args) {
 		
-		ArrayBag<Item> shoppingCart = new ArrayBag<>(5);
+		ShoppingCart shoppingCart = new ShoppingCart(5);
 		
 		System.out.println("Empty cart:\n"+shoppingCart.displayCart());
 		System.out.println("\nAdding 3 items");
@@ -56,9 +56,7 @@ public class ShoppingCartTest {
 		System.out.println("\nSize: "+shoppingCart.getCurrentSize());
 		System.out.println(shoppingCart.displayCart());
 		System.out.println("\nChecking toArray\nDoes not work, ClassCastException");
-		for(int i = 0; i < shoppingCart.toArray().length;i++) {
-			System.out.println(shoppingCart.toArray()[i].toString());
-		}
-	}//end main
-
+		shoppingCart.toArray();
+		
+	}
 }//end class

@@ -5,11 +5,11 @@ import java.util.Arrays;
    @author Frank M. Carrano, Timothy M. Henry, hNilsson
    @version 6.0
 */
-public final class ArrayBag<T> implements ShoppingCart<T>
+public final class ArrayBag<T>
 {
 	private T[] bag; // Cannot be final due to doubling
 	private int numberOfEntries;
-   private boolean integrityOK = false;
+	private boolean integrityOK = false;
 	private static final int DEFAULT_CAPACITY = 25; // Initial capacity of bag
 	private static final int MAX_CAPACITY = 10000;
 
@@ -119,7 +119,6 @@ public final class ArrayBag<T> implements ShoppingCart<T>
 	} // end contains
    
 	/** Removes all entries from this bag. */
-	@Override
 	public boolean clear() {
 		checkintegrity();
 		while (!isEmpty()) {
@@ -131,7 +130,7 @@ public final class ArrayBag<T> implements ShoppingCart<T>
 	/** Removes one unspecified entry from this bag, if possible.
        @return  Either the removed entry, if the removal
        was successful, or null. */
-	@Override
+	
 	public boolean removeItem() {
 		checkintegrity();
 		boolean result = true;
@@ -149,7 +148,7 @@ public final class ArrayBag<T> implements ShoppingCart<T>
 	/** Removes one occurrence of a given entry from this bag.
        @param anEntry  The entry to be removed.
        @return  True if the removal was successful, or false if not. */
-	@Override
+	
 	public boolean removeItem(T anItem) {
 		checkintegrity();
 		boolean result = true;
@@ -245,7 +244,7 @@ public final class ArrayBag<T> implements ShoppingCart<T>
 	 * @param i Desired instances of item
 	 * @return true if frequency was successfully changed, false if not
 	 */
-   @Override
+   
    public boolean changeFrequency(T anItem, int i) {
 		checkintegrity();
 		boolean result;
@@ -260,7 +259,7 @@ public final class ArrayBag<T> implements ShoppingCart<T>
 	 * 
 	 * @return formatted information about the cart as a string
 	 */
-   @Override
+   
 	public String displayCart() {
 		StringBuilder sb = new StringBuilder("Bag");
 		for (int i = 0; i < numberOfEntries; i++) {
@@ -275,7 +274,7 @@ public final class ArrayBag<T> implements ShoppingCart<T>
 	 * @param anItem to get frequency of
 	 * @return integer representing number of instances of specified item
 	 */
-	@Override
+	
 	public int getFrequency(T anItem) {
 		int c = 0;
 		for(int i = 0; i<numberOfEntries;i++) {
@@ -340,6 +339,6 @@ public final class ArrayBag<T> implements ShoppingCart<T>
 	 */
 	public static int getMaxCapacity() {
 		return MAX_CAPACITY;
-	}//edn getMaxCapacity
+	}//end getMaxCapacity
 	
 } // end ArrayBag
