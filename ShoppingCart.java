@@ -1,3 +1,8 @@
+/**
+   A class representing a shopping cart using the ArrayBag adt.
+   @author hNilsson
+   @version 1.0
+*/
 public class ShoppingCart {
 
 	private ArrayBag<Item> shoppingCart;
